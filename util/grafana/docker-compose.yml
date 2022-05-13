@@ -1,0 +1,55 @@
+version: "3.8"
+services:
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./:/etc/prometheus
+    networks:
+      - monitoring
+    restart: always
+  blackbox:
+    image: prom/blackbox-exporter:master
+    ports:
+      - "9115:9115"
+    volumes:
+      - ./:/config
+    command: --config.file=/config/blackbox.yml
+    networks:
+      - monitoring
+    restart: always
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    user: root
+    environment:
+      - GF_PATHS_CONFIG=/grafana/grafana.ini
+      - GF_PATHS_DATA=/grafana/data
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel
+    volumes:
+      - ./grafana:/grafana
+    networks:
+      - monitoring
+    restart: always
+  loki:
+    image: grafana/loki:2.0.0
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - ./loki-config.yaml:/etc/loki/local-config.yaml
+      - ./loki/chunks:/loki/chunks
+    networks:
+      - monitoring
+  promtail:
+    image: grafana/promtail:2.0.0
+    volumes:
+      - /var/log:/var/log
+    command: -config.file=/etc/promtail/config.yml
+    networks:
+      - monitoring
+
+networks:
+  monitoring:

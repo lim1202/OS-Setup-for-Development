@@ -1,0 +1,14 @@
+modules:
+  health:
+    prober: http
+    timeout: 5s
+    http:
+      method: GET
+      no_follow_redirects: false
+      fail_if_not_ssl: false
+      # fail_if_body_matches_regexp:
+        # - "{\"status\":\"DOWN\"}"
+      fail_if_body_not_matches_regexp:
+        - "{\"status\":\"UP\"}"
+      preferred_ip_protocol: "ip4" # defaults to "ip6"
+      ip_protocol_fallback: false  # no fallback to "ip6"

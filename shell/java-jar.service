@@ -1,0 +1,11 @@
+[Unit]
+Description=Spring Boot Application
+After=syslog.target
+
+[Service]
+WorkingDirectory=/app/api
+ExecStart=/usr/bin/java -jar /app/api/api.jar
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
