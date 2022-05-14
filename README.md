@@ -61,6 +61,12 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_VERSION}/install.sh 
 nvm install --lts
 ```
 
+#### NPM mirror configuration
+
+```sh
+npm config set registry https://registry.npmmirror.com/
+```
+
 #### Install global npm packages
 
 ```sh
