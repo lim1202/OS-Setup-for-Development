@@ -138,8 +138,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ```ini
 # ~/.gitconfig-github.inc && ~/.gitconfig-work.inc
 [user]
-        name = Your Name
-        email = Your Email
+    name = Your Name
+    email = Your Email
 ```
 
 ### Add git changelog command to ~/.zshrc
