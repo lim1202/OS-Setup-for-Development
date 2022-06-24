@@ -12,13 +12,12 @@ git log $(git describe --tags --abbrev=0)..HEAD --pretty=format:"- %h %s" --no-m
 git log $(git describe --tags --abbrev=0)..HEAD --pretty=format:"- %h %s" --no-merges --grep fix:
 ```
 
-
 ## Git Config Includes
 
 ```ini
-[includeIf "gitdir:~/code/github/"]
+[includeIf "gitdir:~/github/"]
     path = .gitconfig-github.inc
 
-[includeIf "gitdir:~/code/work/"]
+[includeIf "gitdir:~/work/"]
     path = .gitconfig-work.inc
 ```
