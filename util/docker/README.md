@@ -16,7 +16,7 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 cat << EOF > /etc/docker/daemon.json
 {
   "registry-mirrors": [
-    "https://ybjcc2gb.mirror.aliyuncs.com"
+    "https://mirror.ccs.tencentyun.com"
   ],
   "log-driver": "json-file",
   "log-opts": {
@@ -33,6 +33,7 @@ sudo systemctl restart docker
 | Mirros  | Url                                     |
 | -------- | -------------------------------------- |
 | 阿里云    | https://ybjcc2gb.mirror.aliyuncs.com   |
+| 腾讯云    | https://mirror.ccs.tencentyun.com.     |
 
 ## Manage Docker as a non-root user
 
