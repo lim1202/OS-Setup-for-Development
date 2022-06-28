@@ -80,6 +80,13 @@ rsync -qaz --prune-empty-dirs --include="*/" --include="*.yml" --exclude="*" $SR
 export ALL_PROXY=http://127.0.0.1:7890
 ```
 
+- open Chrome with proxy in MacOS
+
+```sh
+open -a "Google Chrome" --args --proxy-server="socks://localhost:1080"
+```
+
+
 #### Proxy server via Tinyproxy
 
 ```sh
