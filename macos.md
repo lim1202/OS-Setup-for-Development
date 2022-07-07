@@ -1,0 +1,164 @@
+# macOS Setup for Development
+
+
+## PACKAGE MANAGER
+
+### [Homebrew](https://brew.sh/)
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"b
+```
+
+
+## GUI APPLICATIONS
+
+### Install via Homebrew
+
+```sh
+brew install <formula|cask>
+```
+
+- calibre: The one stop solution for all your e-book needs.
+- cheatsheet: Know your shortcuts.
+- dbeaver-community: Free multi-platform database tool.
+- docker: Docker Desktop for Mac
+- drawio: free online diagram software.
+- maccy: macOS clipboard manager.
+- openvpn-connect: VPN client.
+- postman: API platform
+- telegram: Telegram Messenger
+- visual-studio-code: Code editor.
+- vlc: Free and open-source, portable, cross-platform media player.
+
+
+## TERMINAL APPLICATIONS
+
+### OH MY ZSH
+
+```sh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### Shell Promt: [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)
+
+0. Install Nerd Fonts
+
+```sh
+brew tap homebrew/cask-fonts # Homebrew Cask Fonts
+
+brew install font-fira-code-nerd-font
+```
+
+1. Install Starship
+
+```sh
+brew install starship
+```
+
+2. Add the following to the end of ~/.zshrc:
+
+```sh
+# ~/.zshrc
+eval "$(starship init zsh)"
+```
+
+### Oh-My-ZSH Plugins
+
+- zsh-autosuggestions
+
+```sh
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+- zsh-syntax-highlighting
+
+```sh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+> Note that zsh-syntax-highlighting must be the last plugin sourced.
+
+
+## PROGRAMMING LANGUAGES
+
+### Python
+
+#### Miniconda Installation
+
+```sh
+brew install --cask miniconda
+
+# conda config --set auto_activate_base false
+conda config --set changeps1 false
+```
+
+#### Pip configuration
+
+```sh
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+pip config set install.trusted-host mirrors.aliyun.com
+```
+
+### Node.js
+
+#### [NVM](https://github.com/creationix/nvm) Installation
+
+```sh
+brew install nvm
+```
+
+#### Install latest Node.js LTS version
+
+```sh
+nvm install --lts
+```
+
+#### NPM mirror configuration
+
+```sh
+npm config set registry https://registry.npmmirror.com/
+```
+
+#### Install global npm packages
+
+```sh
+npm install -g @vue/cli typescript
+```
+
+### Java
+
+#### Install Java via SdkMan
+
+```sh
+curl -s "https://get.sdkman.io" | bash
+
+sdk list java
+sdk install java
+```
+
+
+## GIT
+
+### Git Configuration
+
+```ini
+# ~/.gitconfig
+[includeIf "gitdir:~/github/"]
+    path = .gitconfig-github.inc
+
+[includeIf "gitdir:~/work/"]
+    path = .gitconfig-work.inc
+```
+
+```ini
+# ~/.gitconfig-github.inc && ~/.gitconfig-work.inc
+[user]
+    name = Your Name
+    email = Your Email
+```
+
+### Add git changelog command to ~/.zshrc
+```sh
+# ~/.zshrc
+alias glot="git log \$(git describe --tags --abbrev=0)..HEAD --pretty=format:\"- %h %s\" --no-merges"
+```
