@@ -4,6 +4,7 @@
 
 ```ini
 # ~/.vimrc
+syntax on
 set background=dark
 ```
 
