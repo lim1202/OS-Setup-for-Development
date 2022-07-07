@@ -15,8 +15,19 @@ choco feature enable -n allowGlobalConfirmation
 ### Install via Chocolatey
 
 ```
-choco install 7zip calibre dbeaver drawio mitmproxy pandoc starship vscode xmind-2020
+choco install 7zip calibre dbeaver drawio mitmproxy obs-studio pandoc vscode xmind-2020
 ```
+
+- 7zip: File archiver with a high compression ratio.
+- calibre: The one stop solution for all your e-book needs.  
+- dbeaver: Free multi-platform database tool. 
+- drawio: Free online diagram software.
+- ffmpeg: Very fast video and audio converter.
+- mitmproxy: a set of tools that provide an interactive, SSL/TLS-capable intercepting proxy for HTTP/1, HTTP/2, and WebSockets
+- obs-studio: Free and open source software for video recording and live streaming.
+- pandoc: Free and open-source document converter.
+- vscode: Code editor.
+- xmind-2020: Mind mapping tool.
 
 ## TERMINAL APPLICATIONS
 
@@ -84,7 +95,13 @@ sdk list java
 sdk install java
 ```
 
-## OH MY ZSH
+## ZSH
+
+```sh
+sudo apt install zsh
+```
+
+### OH MY ZSH
 
 ```sh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
