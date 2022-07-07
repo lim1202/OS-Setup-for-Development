@@ -33,6 +33,10 @@ choco upgrade all
 #### Remap Capslock to Control
 
 ```powershell
+choco install sharpkeys
+```
+
+```powershell
 # use PowerShell (run as Admin)
 $hexified = "00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00".Split(',') | % { "0x$_"};
 
