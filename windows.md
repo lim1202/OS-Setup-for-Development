@@ -1,5 +1,6 @@
 # Windows Setup for Development
 
+
 ## PACKAGE MANAGER
 
 ### [Chocolatey](https://chocolatey.org/install)
@@ -10,7 +11,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco feature enable -n allowGlobalConfirmation
 ```
 
-## GUI APPLICATIONS
+
+## WINDOWS APPLICATIONS
 
 ### Install via Chocolatey
 
@@ -29,13 +31,60 @@ choco install 7zip calibre dbeaver drawio mitmproxy obs-studio pandoc vscode xmi
 - vscode: Code editor.
 - xmind-2020: Mind mapping tool.
 
-## TERMINAL APPLICATIONS
+
+## LINUX TERMINAL APPLICATIONS
 
 ### [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install) Installation
 
 ```powershell
 wsl --install
 ```
+
+### ZSH
+
+```sh
+sudo apt install zsh
+```
+
+### OH MY ZSH
+
+```sh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### Shell Promt: [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)
+
+1. Install Starship
+
+```sh
+curl -sS https://starship.rs/install.sh | sh
+```
+
+2. Add the following to the end of ~/.zshrc:
+
+```sh
+# ~/.zshrc
+eval "$(starship init zsh)"
+```
+
+### Oh-My-ZSH Plugins
+
+- zsh-autosuggestions
+
+```sh
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+- zsh-syntax-highlighting
+
+```sh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+> Note that zsh-syntax-highlighting must be the last plugin sourced.
+
+
+## PROGRAMMING LANGUAGES
 
 ### Python
 
@@ -94,49 +143,6 @@ curl -s "https://get.sdkman.io" | bash
 sdk list java
 sdk install java
 ```
-
-## ZSH
-
-```sh
-sudo apt install zsh
-```
-
-### OH MY ZSH
-
-```sh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-### Shell Promt: [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)
-
-1. Install Starship
-
-```sh
-curl -sS https://starship.rs/install.sh | sh
-```
-
-2. Add the following to the end of ~/.zshrc:
-
-```sh
-# ~/.zshrc
-eval "$(starship init zsh)"
-```
-
-### Oh-My-ZSH Plugins
-
-- zsh-autosuggestions
-
-```sh
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-
-- zsh-syntax-highlighting
-
-```sh
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-
-> Note that zsh-syntax-highlighting must be the last plugin sourced.
 
 
 ## GIT
