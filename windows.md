@@ -17,7 +17,7 @@ choco feature enable -n allowGlobalConfirmation
 ### Install via Chocolatey
 
 ```
-choco install 7zip calibre dbeaver drawio mitmproxy obs-studio pandoc vscode xmind-2020
+choco install 7zip calibre dbeaver drawio mitmproxy obs-studio pandoc postman vscode xmind-2020
 ```
 
 - 7zip: File archiver with a high compression ratio.
@@ -28,6 +28,7 @@ choco install 7zip calibre dbeaver drawio mitmproxy obs-studio pandoc vscode xmi
 - mitmproxy: a set of tools that provide an interactive, SSL/TLS-capable intercepting proxy for HTTP/1, HTTP/2, and WebSockets
 - obs-studio: Free and open source software for video recording and live streaming.
 - pandoc: Free and open-source document converter.
+- postman: API platform
 - vscode: Code editor.
 - xmind-2020: Mind mapping tool.
 
