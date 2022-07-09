@@ -101,16 +101,21 @@ pip config set install.trusted-host mirrors.aliyun.com
 
 ### Node.js
 
-#### [NVM](https://github.com/creationix/nvm) Installation
+### [Fast Node Manager (fnm)](https://github.com/Schniz/fnm)
 
 ```sh
-brew install nvm
+brew install fnm
+```
+
+#### Add the following to your .zshrc profile:
+```sh
+eval "$(fnm env --use-on-cd)"
 ```
 
 #### Install latest Node.js LTS version
 
 ```sh
-nvm install --lts
+nvm install <version>
 ```
 
 #### NPM mirror configuration

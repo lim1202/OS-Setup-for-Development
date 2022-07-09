@@ -109,17 +109,16 @@ pip config set install.trusted-host mirrors.aliyun.com
 
 ### Node.js
 
-#### [NVM](https://github.com/creationix/nvm) Installation
+#### [Fast Node Manager (fnm)](https://github.com/Schniz/fnm)
 
 ```sh
-NVM_VERSION = "v0.39.1" # replace it with latest version
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_VERSION}/install.sh | bash
+curl -fsSL https://fnm.vercel.app/install | bash
 ```
 
 #### Install latest Node.js LTS version
 
 ```sh
-nvm install --lts
+nvm install <version>
 ```
 
 #### NPM mirror configuration
