@@ -115,7 +115,7 @@ eval "$(fnm env --use-on-cd)"
 #### Install latest Node.js LTS version
 
 ```sh
-fnm install <version>
+fnm install --lts
 ```
 
 #### NPM mirror configuration
