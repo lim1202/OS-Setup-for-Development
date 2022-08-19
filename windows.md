@@ -118,7 +118,7 @@ curl -fsSL https://fnm.vercel.app/install | bash
 #### Install latest Node.js LTS version
 
 ```sh
-nvm install <version>
+fnm install <version>
 ```
 
 #### NPM mirror configuration
