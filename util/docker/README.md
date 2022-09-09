@@ -16,7 +16,7 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 cat << EOF > /etc/docker/daemon.json
 {
   "registry-mirrors": [
-    "https://mirror.ccs.tencentyun.com"
+    "https://ybjcc2gb.mirror.aliyuncs.com"
   ],
   "log-driver": "json-file",
   "log-opts": {
