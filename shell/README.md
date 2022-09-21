@@ -1,5 +1,20 @@
 # Shell
 
+## CLI Tools Made With Rust
+
+#### Install Cargo
+
+```sh
+curl https://sh.rustup.rs -sSf | sh
+
+```
+
+- [bat](https://github.com/sharkdp/bat): A cat(1) clone with syntax highlighting and Git integration.
+- [exa](https://github.com/ogham/exa): a modern replacement for ls.
+- [ripgrep](https://github.com/BurntSushi/ripgrep): a line-oriented search tool that recursively searches the current directory for a regex pattern. 
+- [dust](https://github.com/bootandy/dust): du + rust = dust. Like du but more intuitive.
+- [bottom](https://github.com/ClementTsang/bottom): A customizable cross-platform graphical process/system monitor for the terminal.
+
 ## ZSH
 
 #### Shell Promt
