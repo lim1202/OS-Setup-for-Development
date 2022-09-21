@@ -20,8 +20,9 @@ brew install <formula|cask>
 
 - calibre: The one stop solution for all your e-book needs.
 - cheatsheet: Know your shortcuts.
+- colima: Container runtimes on macOS (and Linux) with minimal setup.
 - dbeaver-community: Free multi-platform database tool.
-- docker: Docker Desktop for Mac
+- docker: Docker client for Mac
 - drawio: free online diagram software.
 - maccy: macOS clipboard manager.
 - openvpn-connect: VPN client.
