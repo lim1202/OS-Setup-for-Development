@@ -73,7 +73,7 @@ systemctl stop docker
 3. move current data to new directory
 
 ```sh
-rsync -aP /var/lib/docker/ /path/to/your/docker
+rsync -aP /var/lib/docker /path/to/your/docker
 
 mv /var/lib/docker /var/lib/docker.old
 ```
@@ -87,5 +87,5 @@ systemctl start docker
 5. (optional) remove old docker data
 
 ```sh
-rm -f /var/lib/docker.old
+rm -rf /var/lib/docker.old
 ```
