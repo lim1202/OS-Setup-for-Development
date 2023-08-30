@@ -34,10 +34,10 @@ brew install <formula|cask>
 
 ## TERMINAL APPLICATIONS
 
-### OH MY ZSH
+### Zap
 
 ```sh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 ```
 
 ### Shell Promt: [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)
@@ -62,23 +62,6 @@ brew install starship
 # ~/.zshrc
 eval "$(starship init zsh)"
 ```
-
-### Oh-My-ZSH Plugins
-
-- zsh-autosuggestions
-
-```sh
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-
-- zsh-syntax-highlighting
-
-```sh
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-
-> Note that zsh-syntax-highlighting must be the last plugin sourced.
-
 
 ## PROGRAMMING LANGUAGES
 

@@ -17,13 +17,21 @@ curl https://sh.rustup.rs -sSf | sh
 
 ## ZSH
 
-#### Shell Promt
+### Shell Promt
 
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k#installation)
 
 - [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)
 
-#### Oh My Zsh Installation
+### Zap
+
+```sh
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+```
+
+### Oh My Zsh
+
+#### Installation
 
 ```sh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
