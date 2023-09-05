@@ -1,5 +1,36 @@
 # Shell
 
+## CURL
+
+### Timing Details With cURL
+
+```sh
+#!/bin/bash
+
+curl -w @- -o /dev/null -s "$@" <<'EOF'
+    time_namelookup:  %{time_namelookup}\n
+       time_connect:  %{time_connect}\n
+    time_appconnect:  %{time_appconnect}\n
+   time_pretransfer:  %{time_pretransfer}\n
+      time_redirect:  %{time_redirect}\n
+ time_starttransfer:  %{time_starttransfer}\n
+                    ----------\n
+         time_total:  %{time_total}\n
+EOF
+```
+
+```sh
+❯ ./curl-time ip-api.com
+    time_namelookup:  0.014111
+       time_connect:  0.014727
+    time_appconnect:  0.000000
+   time_pretransfer:  0.014778
+      time_redirect:  0.000000
+ time_starttransfer:  0.482006
+                    ----------
+         time_total:  0.482578
+```
+
 ## CLI Tools Made With Rust
 
 #### Install Cargo
