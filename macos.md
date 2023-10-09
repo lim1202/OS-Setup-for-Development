@@ -67,7 +67,7 @@ eval "$(starship init zsh)"
 
 ### Python
 
-#### Miniconda Installation
+#### Installation
 
 ```sh
 brew install --cask miniforge

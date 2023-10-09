@@ -34,6 +34,13 @@ pip install -i https://mirrors.aliyun.com/pypi/simple \
 pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
 ```
 
+## miniforge
+
+```sh
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
 ## Miniconda
 
 ```sh
