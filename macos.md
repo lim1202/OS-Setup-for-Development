@@ -70,7 +70,7 @@ eval "$(starship init zsh)"
 #### Miniconda Installation
 
 ```sh
-brew install --cask miniconda
+brew install --cask miniforge
 
 # conda config --set auto_activate_base false
 conda config --set changeps1 false
